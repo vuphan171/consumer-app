@@ -1,4 +1,5 @@
 import 'package:adaptive_theme/adaptive_theme.dart';
+import 'package:bot_toast/bot_toast.dart';
 import 'package:consumer_app/resources/theme_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -32,7 +33,8 @@ class ConsumerApp extends StatelessWidget {
             theme: theme,
             darkTheme: darkTheme,
             builder: (context, child) {
-              return child!;
+              child = BotToastInit()(context, child);
+              return child;
             },
           ),
         );

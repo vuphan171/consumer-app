@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'custom_color.dart';
 
-const _primary = Color(0xFF006FFD);
+const _primary = Color(0xFF235697);
 const _onPrimary = Color(0xFFFFFFFF);
 const _secondary = Color(0xFF0A69AD);
 const _onSecondary = Color(0xFFFFFFFF);
@@ -12,7 +12,7 @@ const _error = Color(0xFFFF2149);
 const _onError = Color(0xFFFFFFFF);
 const _surfaceDim = Color(0xFFD0D0D0);
 const _surface = Color(0xFFFFFFFF);
-const _onSurface = Color(0xFF2A2C36);
+const _onSurface = Color(0xFF3A3C4C);
 const _onSurfaceVariant = Color(0xFF7D7C93);
 const _surfaceContainer = Color(0xFFFFFFFF);
 const _outline = Color(0xFFD0D0D0);
@@ -20,6 +20,7 @@ const _badgeStar = Color(0xFFFF8000);
 const _cardShadow = Color(0x0D000000);
 const _success = Color(0xFFE8E8E8);
 const _warning = Color(0xFFE8E8E8);
+const _outlineVariant = Color(0xFFF3F3F3);
 
 final ThemeData lightTheme = ThemeData(
   fontFamily: 'Inter',
@@ -38,6 +39,7 @@ final ThemeData lightTheme = ThemeData(
     onError: _onError,
     onErrorContainer: _onError,
     outline: _outline,
+    outlineVariant: _outlineVariant,
   ),
   extensions: const <ThemeExtension<dynamic>>[
     CustomColors(

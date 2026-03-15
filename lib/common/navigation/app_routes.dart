@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:bot_toast/bot_toast.dart';
 import 'package:consumer_app/common/navigation/route_paths.dart';
 import 'package:consumer_app/modules/forgot-password/screen/forgot-password-screen.dart';
 import 'package:consumer_app/modules/home/screen/home-screen.dart';
@@ -16,8 +17,8 @@ class AppRoutes {
 
   static final appRoutes = GoRouter(
     navigatorKey: appKey,
-    observers: [],
-    initialLocation: RoutePaths.signIn,
+    observers: [BotToastNavigatorObserver()],
+    initialLocation: RoutePaths.home,
     redirect: (context, state) async {
       return null;
     },

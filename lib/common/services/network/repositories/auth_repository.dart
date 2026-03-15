@@ -11,7 +11,7 @@ class AuthRepository {
 
     final fakeJson = {
       "success": true,
-      "message": "Invalid email or password",
+      "message": "Login success",
       "data": "mock_token_123",
     };
 

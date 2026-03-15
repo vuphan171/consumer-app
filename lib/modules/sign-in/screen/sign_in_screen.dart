@@ -1,7 +1,9 @@
-import 'package:flutter/cupertino.dart';
+import 'package:consumer_app/common/navigation/route_paths.dart';
+import 'package:consumer_app/utils/app_toast.dart';
 import 'package:flutter/material.dart';
 import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'package:reactive_forms/reactive_forms.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -39,22 +41,10 @@ class SignInScreenState extends ConsumerState<SignInScreen> {
     ref.listenManual<AsyncValue<void>>(signInProvider, (prev, next) {
       next.whenOrNull(
         data: (_) {
-          showDialog(
-            context: context,
-            builder: (_) => const CupertinoAlertDialog(
-              title: Text('Success'),
-              content: Text('Reset password link sent'),
-            ),
-          );
+          context.go(RoutePaths.home);
         },
         error: (e, _) {
-          showDialog(
-            context: context,
-            builder: (_) => CupertinoAlertDialog(
-              title: Text('Error'),
-              content: Text(e.toString()),
-            ),
-          );
+          AppToast.showError(e.toString());
         },
       );
     });
@@ -67,15 +57,9 @@ class SignInScreenState extends ConsumerState<SignInScreen> {
   }
 
   void _onSubmit() {
-    if (!form.valid) {
-      form.markAllAsTouched();
-      return;
-    }
-
     final value = form.value;
     final email = value['email'] as String;
     final password = value['password'] as String;
-
     ref.read(signInProvider.notifier).signIn(email, password);
   }
 
@@ -144,7 +128,7 @@ class SignInScreenState extends ConsumerState<SignInScreen> {
                       type: ButtonType.secondary,
                       text: 'Forgot Password?',
                       onPressed: () {
-                        // TODO: navigate
+                        context.goNamed(RoutePaths.forgotPassword);
                       },
                     ),
                     SizedBox(height: 8.h),
