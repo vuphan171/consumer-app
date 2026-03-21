@@ -14,4 +14,5 @@ final class RoutePaths {
   static const String transactionList = '/transaction_list';
   static const String walletList = '/wallet_list';
   static const String newWallet = '/new_wallet';
+  static const String profile = '/profile';
 }

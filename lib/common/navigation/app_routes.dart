@@ -4,6 +4,7 @@ import 'package:consumer_app/common/navigation/route_paths.dart';
 import 'package:consumer_app/modules/forgot-password/screen/forgot-password-screen.dart';
 import 'package:consumer_app/modules/home/screen/home-screen.dart';
 import 'package:consumer_app/modules/main/main-shell.dart';
+import 'package:consumer_app/modules/profile/screen/profile-screen.dart';
 import 'package:consumer_app/modules/setting/screen/setting-screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -18,7 +19,7 @@ class AppRoutes {
   static final appRoutes = GoRouter(
     navigatorKey: appKey,
     observers: [BotToastNavigatorObserver()],
-    initialLocation: RoutePaths.home,
+    initialLocation: RoutePaths.setting,
     redirect: (context, state) async {
       return null;
     },
@@ -30,10 +31,6 @@ class AppRoutes {
       GoRoute(
         path: RoutePaths.forgotPassword,
         builder: (context, state) => ForgotPasswordScreen(),
-      ),
-      GoRoute(
-        path: RoutePaths.setting,
-        builder: (context, state) => SettingScreen(),
       ),
       StatefulShellRoute.indexedStack(
         builder: (context, state, navigationShell) {
@@ -47,6 +44,20 @@ class AppRoutes {
                 name: RoutePaths.home,
                 pageBuilder: (context, state) {
                   return const NoTransitionPage(child: HomeScreen());
+                },
+              ),
+              GoRoute(
+                path: RoutePaths.setting,
+                name: RoutePaths.setting,
+                pageBuilder: (context, state) {
+                  return const NoTransitionPage(child: SettingScreen());
+                },
+              ),
+              GoRoute(
+                path: RoutePaths.profile,
+                name: RoutePaths.profile,
+                pageBuilder: (context, state) {
+                  return const NoTransitionPage(child: ProfileScreen());
                 },
               ),
             ],

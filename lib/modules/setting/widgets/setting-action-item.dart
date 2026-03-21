@@ -1,18 +1,23 @@
 import 'package:adaptive_theme/adaptive_theme.dart';
-import 'package:consumer_app/gen/assets.gen.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class SettingsItem extends StatelessWidget {
+class SettingActionItem extends StatelessWidget {
   final String title;
-  const SettingsItem({super.key, required this.title});
+  final String? value;
+
+  const SettingActionItem({
+    super.key,
+    required this.title,
+    required this.value,
+  });
 
   @override
   Widget build(BuildContext context) {
     final theme = AdaptiveTheme.of(context).theme;
 
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 12.h),
+      padding: EdgeInsets.symmetric(vertical: 14.h),
       decoration: BoxDecoration(
         border: Border(
           bottom: BorderSide(color: theme.colorScheme.outline, width: 0.5),
@@ -24,14 +29,15 @@ class SettingsItem extends StatelessWidget {
         children: [
           Text(
             title,
-            style: theme.textTheme.bodyMedium?.copyWith(
-              fontWeight: FontWeight.w500,
+            style: theme.textTheme.titleSmall?.copyWith(
+              fontWeight: FontWeight.w400,
             ),
           ),
-          SizedBox(
-            width: 14.r,
-            height: 14.r,
-            child: Assets.images.svg.icArrowRight.svg(),
+          Text(
+            title,
+            style: theme.textTheme.titleSmall?.copyWith(
+              fontWeight: FontWeight.w400,
+            ),
           ),
         ],
       ),
