@@ -101,23 +101,23 @@ final ThemeData lightTheme = ThemeData(
       color: _onSurface,
     ),
     bodySmall: GoogleFonts.inter(
-      fontSize: 12.sp,
+      fontSize: 13.sp,
       fontWeight: FontWeight.normal,
       color: _onSurface,
     ),
     labelLarge: GoogleFonts.inter(
       fontSize: 14.sp,
-      fontWeight: FontWeight.w500,
+      fontWeight: FontWeight.w400,
       color: _onSurface,
     ),
     labelMedium: GoogleFonts.inter(
       fontSize: 12.sp,
-      fontWeight: FontWeight.w500,
+      fontWeight: FontWeight.w400,
       color: _onSurface,
     ),
     labelSmall: GoogleFonts.inter(
       fontSize: 10.sp,
-      fontWeight: FontWeight.w500,
+      fontWeight: FontWeight.w400,
       color: _onSurface,
     ),
   ),

@@ -10,7 +10,7 @@ class TransactionItem extends StatelessWidget {
     final theme = AdaptiveTheme.of(context).theme;
     return Container(
       width: double.infinity,
-      padding: EdgeInsets.only(top: 12.h, bottom: 8.h),
+      padding: EdgeInsets.only(top: 4.h, bottom: 2.h),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -18,7 +18,7 @@ class TransactionItem extends StatelessWidget {
             width: 36.r,
             height: 36.r,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(40.r),
+              borderRadius: BorderRadius.circular(36.r),
               color: Colors.yellow,
             ),
           ),
@@ -35,7 +35,7 @@ class TransactionItem extends StatelessWidget {
                 ),
                 Text(
                   '10:54 AM',
-                  style: theme.textTheme.bodySmall?.copyWith(
+                  style: theme.textTheme.labelMedium?.copyWith(
                     color: theme.colorScheme.onSurfaceVariant,
                   ),
                 ),

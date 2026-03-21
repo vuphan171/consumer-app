@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:bot_toast/bot_toast.dart';
 import 'package:consumer_app/common/navigation/route_paths.dart';
+import 'package:consumer_app/modules/account/screen/account_screen.dart';
 import 'package:consumer_app/modules/forgot-password/screen/forgot-password-screen.dart';
 import 'package:consumer_app/modules/home/screen/home-screen.dart';
 import 'package:consumer_app/modules/main/main-shell.dart';
@@ -19,7 +20,7 @@ class AppRoutes {
   static final appRoutes = GoRouter(
     navigatorKey: appKey,
     observers: [BotToastNavigatorObserver()],
-    initialLocation: RoutePaths.setting,
+    initialLocation: RoutePaths.account,
     redirect: (context, state) async {
       return null;
     },
@@ -44,6 +45,13 @@ class AppRoutes {
                 name: RoutePaths.home,
                 pageBuilder: (context, state) {
                   return const NoTransitionPage(child: HomeScreen());
+                },
+              ),
+              GoRoute(
+                path: RoutePaths.account,
+                name: RoutePaths.account,
+                pageBuilder: (context, state) {
+                  return const NoTransitionPage(child: AccountScreen());
                 },
               ),
               GoRoute(
