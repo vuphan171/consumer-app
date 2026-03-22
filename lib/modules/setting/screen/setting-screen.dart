@@ -22,6 +22,7 @@ class SettingScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text('Setting', style: theme.textTheme.displayLarge),
+              SizedBox(height: 24.h),
               SettingsSection(title: 'General', items: generalSettings),
               SizedBox(height: 24.h),
               SettingsSection(

@@ -18,7 +18,7 @@ class SettingToggleItem extends StatelessWidget {
     final theme = AdaptiveTheme.of(context).theme;
 
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 12.h),
+      padding: EdgeInsets.symmetric(vertical: 10.h),
       decoration: BoxDecoration(
         border: Border(
           bottom: BorderSide(color: theme.colorScheme.outline, width: 0.5),
@@ -28,12 +28,7 @@ class SettingToggleItem extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text(
-            title,
-            style: theme.textTheme.titleSmall?.copyWith(
-              fontWeight: FontWeight.w400,
-            ),
-          ),
+          Text(title, style: theme.textTheme.bodyLarge),
           FlutterSwitch(
             value: false,
             onToggle: (val) {},

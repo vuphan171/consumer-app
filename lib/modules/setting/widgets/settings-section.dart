@@ -25,17 +25,17 @@ class SettingsSection extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = AdaptiveTheme.of(context).theme;
     return Padding(
-      padding: EdgeInsets.only(top: 16.h),
+      padding: EdgeInsets.only(top: 4.h),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             title,
-            style: theme.textTheme.titleMedium?.copyWith(
+            style: theme.textTheme.titleLarge?.copyWith(
               fontWeight: FontWeight.w700,
             ),
           ),
-          SizedBox(height: 10.h),
+          SizedBox(height: 4.h),
           ...items.map((item) => buildItem(item)),
         ],
       ),

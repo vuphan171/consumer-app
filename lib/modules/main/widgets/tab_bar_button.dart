@@ -26,7 +26,8 @@ class TabBarButton extends StatelessWidget {
           SizedBox(height: 4.h),
           Text(
             title,
-            style: theme.textTheme.labelMedium?.copyWith(
+            style: theme.textTheme.bodyMedium?.copyWith(
+              fontWeight: FontWeight.w500,
               color: active
                   ? theme.colorScheme.secondary
                   : theme.colorScheme.onSurfaceVariant,

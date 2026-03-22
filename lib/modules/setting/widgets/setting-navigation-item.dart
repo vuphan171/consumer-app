@@ -13,7 +13,7 @@ class SettingNavigationItem extends StatelessWidget {
     final theme = AdaptiveTheme.of(context).theme;
 
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 14.h),
+      padding: EdgeInsets.symmetric(vertical: 12.h),
       decoration: BoxDecoration(
         border: Border(
           bottom: BorderSide(color: theme.colorScheme.outline, width: 0.5),
@@ -23,12 +23,7 @@ class SettingNavigationItem extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text(
-            title,
-            style: theme.textTheme.titleSmall?.copyWith(
-              fontWeight: FontWeight.w400,
-            ),
-          ),
+          Text(title, style: theme.textTheme.bodyLarge),
           SizedBox(
             width: 14.r,
             height: 14.r,

@@ -21,15 +21,15 @@ class ActionItem extends SettingsItemModel {
 }
 
 List<SettingsItemModel> generalSettings = [
-  ActionItem(title: "Language", value: "en"),
+  ActionItem(title: "Language", value: "English"),
   ToggleItem(title: 'Dark Mode', value: true),
   ToggleItem(title: 'Notification', value: true),
-  ActionItem(title: "Currency Format", value: "en"),
-  ActionItem(title: "Default Transaction Type", value: "en"),
+  ActionItem(title: "Currency Format", value: "\$.0000"),
+  ActionItem(title: "Default Transaction Type", value: "Expense"),
 ];
 
 const List<SettingsItemModel> dataManagement = [
-  NavigationItem(title: "Backup & Restore", route: ""),
+  ActionItem(title: "Backup & Restore"),
   ActionItem(title: "Export Data"),
   ActionItem(title: "Sync"),
 ];
