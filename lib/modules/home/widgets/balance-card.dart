@@ -52,9 +52,9 @@ class BalanceCard extends StatelessWidget {
               fontWeight: FontWeight.w700,
             ),
           ),
-          SizedBox(height: 16.h),
+          Spacer(),
           Divider(color: Colors.white.withValues(alpha: 0.15), thickness: 1),
-          SizedBox(height: 8.h),
+          Spacer(),
           Row(
             children: [
               Expanded(

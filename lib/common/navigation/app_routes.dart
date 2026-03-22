@@ -20,7 +20,7 @@ class AppRoutes {
   static final appRoutes = GoRouter(
     navigatorKey: appKey,
     observers: [BotToastNavigatorObserver()],
-    initialLocation: RoutePaths.home,
+    initialLocation: RoutePaths.account,
     redirect: (context, state) async {
       return null;
     },
