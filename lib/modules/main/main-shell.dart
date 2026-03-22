@@ -1,4 +1,5 @@
 import 'package:adaptive_theme/adaptive_theme.dart';
+import 'package:consumer_app/common/navigation/route_paths.dart';
 import 'package:consumer_app/modules/main/widgets/tab_bar_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -59,18 +60,23 @@ class MainShell extends StatelessWidget {
                       color: theme.colorScheme.onSurfaceVariant,
                     ),
                   ),
-                  Container(
-                    width: 44.r,
-                    height: 44.r,
-                    decoration: BoxDecoration(
-                      color: theme.colorScheme.secondary,
-                      borderRadius: BorderRadius.circular(44.r),
-                    ),
-                    child: Center(
-                      child: Icon(
-                        size: 28.r,
-                        Icons.add,
-                        color: theme.colorScheme.onSecondary,
+                  GestureDetector(
+                    onTap: () {
+                      context.push(RoutePaths.newTransaction);
+                    },
+                    child: Container(
+                      width: 44.r,
+                      height: 44.r,
+                      decoration: BoxDecoration(
+                        color: theme.colorScheme.secondary,
+                        borderRadius: BorderRadius.circular(44.r),
+                      ),
+                      child: Center(
+                        child: Icon(
+                          size: 28.r,
+                          Icons.add,
+                          color: theme.colorScheme.onSecondary,
+                        ),
                       ),
                     ),
                   ),

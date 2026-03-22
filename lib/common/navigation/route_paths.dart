@@ -16,4 +16,5 @@ final class RoutePaths {
   static const String newWallet = '/new_wallet';
   static const String profile = '/profile';
   static const String account = '/account';
+  static const String newTransaction = '/new-transaction';
 }

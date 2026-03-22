@@ -5,6 +5,7 @@ import 'package:consumer_app/modules/account/screen/account_screen.dart';
 import 'package:consumer_app/modules/forgot-password/screen/forgot-password-screen.dart';
 import 'package:consumer_app/modules/home/screen/home-screen.dart';
 import 'package:consumer_app/modules/main/main-shell.dart';
+import 'package:consumer_app/modules/new-transaction/screen/new-transaction.dart';
 import 'package:consumer_app/modules/profile/screen/profile-screen.dart';
 import 'package:consumer_app/modules/setting/screen/setting-screen.dart';
 import 'package:flutter/material.dart';
@@ -45,6 +46,13 @@ class AppRoutes {
                 name: RoutePaths.home,
                 pageBuilder: (context, state) {
                   return const NoTransitionPage(child: HomeScreen());
+                },
+              ),
+              GoRoute(
+                path: RoutePaths.newTransaction,
+                name: RoutePaths.newTransaction,
+                pageBuilder: (context, state) {
+                  return NoTransitionPage(child: NewTransactionScreen());
                 },
               ),
               GoRoute(

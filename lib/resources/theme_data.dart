@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'custom_color.dart';
@@ -21,6 +20,8 @@ const _cardShadow = Color(0x0D000000);
 const _success = Color(0xFFE8E8E8);
 const _warning = Color(0xFFE8E8E8);
 const _outlineVariant = Color(0xFFF3F3F3);
+const _inverseSurface = Color(0xFF2E3036);
+const _onInverseSurface = Color(0xFFFFFFFF);
 
 final ThemeData lightTheme = ThemeData(
   fontFamily: 'Inter',
@@ -40,6 +41,8 @@ final ThemeData lightTheme = ThemeData(
     onErrorContainer: _onError,
     outline: _outline,
     outlineVariant: _outlineVariant,
+    inverseSurface: _inverseSurface,
+    onInverseSurface: _onInverseSurface,
   ),
   extensions: const <ThemeExtension<dynamic>>[
     CustomColors(
