@@ -31,7 +31,7 @@ class NewTransactionScreenState extends ConsumerState<NewTransactionScreen> {
         resizeToAvoidBottomInset: true,
         bottomNavigationBar: SafeArea(
           child: Padding(
-            padding: EdgeInsets.fromLTRB(16.w, 12.h, 16.w, 16.h),
+            padding: EdgeInsets.fromLTRB(16.w, 12.h, 16.w, 0.h),
             child: AppButton(
               state: ButtonState.active,
               onPressed: () {},

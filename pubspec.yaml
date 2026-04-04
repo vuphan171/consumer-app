@@ -49,6 +49,8 @@ dependencies:
   smooth_page_indicator: ^2.0.1
   segmented_button_slide: ^2.0.0
   math_expressions: ^3.1.0
+  sqflite: ^2.4.2
+  path: ^1.9.1
 
 dev_dependencies:
   flutter_test:
